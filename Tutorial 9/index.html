@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID and classes - HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="firstdiv" class="red bg-yellow">First</div>
+    <div id="seconddiv">Second</div>
+    <span class="red"></span>
+</body>
+</html>
+
+
+<!-- What did I learn?
+HTML ID AND CLASSES: QUICK REVISION NOTES
+
+1. STORYTIME (1:53)
+
+Imagine a school:
+
+A CLASS is a group of students.
+Many students can belong to the same class.
+
+An ID is like a student's roll number.
+It identifies one specific student.
+
+HTML follows the same idea:
+class = used for a group of elements
+id = used to identify one unique element
+
+Quick memory tip:
+Class means category or group.
+ID means identity or one unique element.
+
+
+2. ID AND CLASSES (4:43)
+
+ID
+An ID is a unique identifier given to one HTML element.
+
+Use the id attribute in HTML:
+
+<div id="main-content">
+  Main content
+</div>
+
+In CSS, select an ID using the hash symbol (#):
+
+#main-content {
+  color: blue;
+}
+
+Important points about IDs:
+An ID should be unique on a page.
+The same ID should not be assigned to multiple elements.
+IDs are useful for unique styling, JavaScript selection, and
+jump links within a page.
+
+
+CLASS
+A class is a name given to one or more HTML elements.
+It is used to group elements that need similar styling or behavior.
+
+Use the class attribute in HTML:
+
+<p class="highlight">First paragraph</p>
+<p class="highlight">Second paragraph</p>
+
+In CSS, select a class using the dot symbol (.):
+
+.highlight {
+  color: red;
+}
+
+Important points about classes:
+A class can be used on many elements.
+One element can have multiple classes.
+Classes are usually preferred for reusable styling.
+
+Example of multiple classes:
+
+<p class="text highlight">
+  This element belongs to both classes.
+</p>
+
+CSS:
+
+.text {
+  font-size: 18px;
+}
+
+.highlight {
+  color: red;
+}
+
+The same element receives the styles from both classes.
+
+ID VS CLASS
+ID is for one unique element.
+Class is for multiple reusable elements.
+
+HTML syntax:
+id="unique-name"
+class="common-name"
+
+CSS syntax:
+#unique-name
+.common-name
+
+Easy rule:
+Use a class when the style may be reused.
+Use an ID when the element is unique.
+
+
+3. CSS DEMO (6:54)
+
+CSS can be written inside the <style> tag.
+The <style> tag is commonly placed inside the <head> section.
+
+Example:
+
+<head>
+  <style>
+    #title {
+      color: blue;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="title">Welcome</h1>
+  <p class="highlight">Highlighted paragraph</p>
+  <p class="highlight">Another highlighted paragraph</p>
+</body>
+
+Explanation:
+#title selects the element with id="title".
+.highlight selects every element with class="highlight".
+Both paragraphs receive the same class styling.
+
+An ID selector is more specific than a class selector.
+For simple and reusable CSS, prefer classes unless a unique ID
+is needed.
+
+One element can have both an ID and a class:
+
+<h1 id="main-title" class="heading">
+  Welcome
+</h1>
+
+CSS:
+
+#main-title {
+  color: blue;
+}
+
+.heading {
+  font-size:  thirtypx;
+}
+
+Note:
+The valid CSS value should be written as 30px, not thirtypx.
+
+Correct version:
+
+.heading {
+  font-size: 30px;
+}
+
+FINAL REVISION
+ID:
+  Unique element
+  CSS selector uses #
+  Should normally appear only once per page
+
+CLASS:
+  Reusable group of elements
+  CSS selector uses .
+  Can be used multiple times
+
+CSS connects HTML elements to styles by selecting their
+tag name, ID, or class.
+-->
