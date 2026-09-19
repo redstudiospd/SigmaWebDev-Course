@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - to learn to be job ready</title>
+</head>
+<body>
+    <h1>Form to apply to as a junior developer in - Red Studios.inc</h1>
+    <form action="post">
+        <div>
+        <label for="username">Enter your username: </label>
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+        </div>  
+        
+        <div> 
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribe to newsletter</label>
+        </div>
+
+        <div>
+            <label for="comment">Enter your comment: </label>
+            <br>
+            <textarea name="comment" rows="4" cols="50"></textarea>
+        </div>
+
+        <div>
+            <select name="level">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="expert">Expert</option>
+            </select>
+        </div>
+
+    </form>
+    
+</body>
+</html>
+
+
+<!--
+HTML FORMS: QUICK REVISION NOTES
+
+1. WHAT IS A FORM (2:30)
+   A form is used to collect information from users.
+   It acts as a container for form controls such as input fields,
+   labels, textareas, checkboxes, radio buttons, and buttons.
+
+   Common form attributes:
+   action: Specifies where the form data should be sent.
+   method: Specifies how the data is sent, commonly "get" or "post".
+
+   Example:
+   <form action="/submit" method="post">
+     Form controls go here
+   </form>
+
+
+2. INPUT TAG (3:36)
+   The <input> tag creates a single-line field that allows users
+   to enter or select data.
+
+   The <input> tag is an empty or void element, so it does not need
+   a closing </input> tag.
+
+   The type attribute determines the kind of input field.
+
+   Common input types:
+   text: For normal text
+   email: For email addresses
+   password: Hides typed characters
+   number: For numeric values
+   radio: For selecting one option
+   checkbox: For selecting one or more options
+   submit: Creates a submit button
+
+   Example:
+   <input type="text" id="username" name="username">
+
+   name:
+   Identifies the data when the form is submitted.
+
+   id:
+   Uniquely identifies the input and connects it to a label.
+
+   placeholder:
+   Shows a temporary hint inside the input field.
+   It is not a replacement for a proper label.
+
+   required:
+   Makes the field compulsory.
+
+   Example:
+   <input type="email" id="email" name="email"
+          placeholder="Enter your email" required>
+
+
+3. LABEL TAG (5:09)
+   The <label> tag provides a readable description for a form
+   control. It tells the user what information should be entered.
+
+   The label is connected to an input using:
+   label's for attribute = input's id attribute
+
+   Example:
+   <label for="username">Username:</label>
+   <input type="text" id="username" name="username">
+
+   The values of "for" and "id" must match exactly.
+
+   Benefits:
+   It improves clarity and accessibility.
+   Clicking the label also focuses or selects the related control.
+
+   A label can also wrap the form control:
+
+   <label>
+     <input type="checkbox" name="terms">
+     I agree to the terms
+   </label>
+
+
+4. TEXTAREA TAG (8:17)
+   The <textarea> tag creates a multi-line text input area.
+   It is useful for comments, messages, reviews, and descriptions.
+
+   Unlike <input>, <textarea> has both an opening and closing tag.
+
+   Example:
+   <textarea id="message" name="message"></textarea>
+
+   Important attributes:
+   rows: Sets the visible number of text lines.
+   cols: Sets the visible width of the text area.
+   name: Identifies the data when submitted.
+   id: Connects the textarea to a label.
+   placeholder: Shows a temporary instruction.
+   required: Makes the textarea compulsory.
+   maxlength: Limits the number of characters.
+
+   Example:
+   <label for="message">Your message:</label>
+   <textarea id="message" name="message"
+             rows="5" cols="30"
+             placeholder="Write your message here"
+             required></textarea>
+
+   Text written between the opening and closing tags becomes the
+   initial value of the textarea:
+
+   <textarea name="comment">Initial text</textarea>
+
+   Quick difference:
+   <input> is generally used for single-line input.
+   <textarea> is used for multi-line input.
+
+   Best practice:
+   Always connect form controls with visible labels.
+   The label's "for" value should match the control's "id" value.
+-->
