@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video, Audio and Media in HTML</title>
+</head>
+<body>
+    <video src="Final output0001-0250.mp4" height="255" controls loop></video>
+    <audio src="AIZO - King Gnu.mp3" controls autoplay></audio>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XZwBNDGuWGU?si=AAImNgkwcEE1MqoQ&amp;start=841" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
+
+<!-- What did I learn?
+HTML VIDEO AND AUDIO: QUICK REVISION NOTES
+
+1. THE VIDEO TAG AND ATTRIBUTES (1:06)
+
+The <video> tag is used to add and play a video on a webpage.
+
+Basic syntax:
+
+<video src="video.mp4"></video>
+
+The <video> tag can contain attributes that control the video,
+such as controls, autoplay, loop, muted, poster, width, and height.
+
+A fallback message can be placed inside the tag for browsers that
+do not support video:
+
+<video src="video.mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+2. SRC ATTRIBUTE AND VIDEO SIZING (1:12)
+
+The src attribute specifies the location or URL of the video file.
+
+Example:
+
+<video src="video.mp4"></video>
+
+The video can be given a size using width and height:
+
+<video src="video.mp4" width="640" height="360"></video>
+
+The width and height values are generally written in pixels.
+
+The <source> tag can also be used to provide different video formats:
+
+<video>
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.webm" type="video/webm">
+</video>
+
+The browser uses the first format it supports.
+
+
+3. MAKING VIDEO RESPONSIVE (1:19)
+
+A responsive video adjusts to the screen size and does not overflow
+its container.
+
+Use CSS:
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+width: 100% makes the video fit the width of its parent container.
+height: auto keeps the video's original aspect ratio.
+
+This helps the video display properly on desktops, tablets, and phones.
+
+
+4. VIDEO CONTROLS (2:00)
+
+The controls attribute displays the browser's built-in video controls.
+
+These usually include:
+Play and pause
+Volume control
+Progress bar
+Time display
+Fullscreen option
+
+Example:
+
+<video src="video.mp4" controls></video>
+
+controls is a Boolean attribute.
+Its presence enables the controls.
+
+
+5. DOWNLOAD, FULL-SCREEN AND MUTE OPTIONS (2:29)
+
+When controls is enabled, the browser may provide options such as:
+Downloading the video
+Entering fullscreen mode
+Muting or unmuting the video
+
+These controls are supplied by the browser's video player.
+
+The exact controls can vary between browsers and devices.
+
+To hide some browser controls, controlslist may be used:
+
+<video controls controlslist="nodownload nofullscreen">
+  <source src="video.mp4" type="video/mp4">
+</video>
+
+Common controlslist values:
+nodownload: Hides the download option.
+nofullscreen: Hides the fullscreen option.
+
+Note:
+These options are not a complete security system.
+They do not prevent a determined user from saving or recording
+the media.
+
+
+6. AUTOPLAY ATTRIBUTE (3:11)
+
+The autoplay attribute makes the video start playing automatically
+when the page loads and the video is ready.
+
+Example:
+
+<video src="video.mp4" autoplay></video>
+
+Modern browsers often block autoplay when the video has sound.
+Autoplay is more likely to work when the video is muted.
+
+Common example:
+
+<video src="video.mp4" autoplay muted></video>
+
+
+7. REMOVING AUTOPLAY (3:15)
+
+To remove autoplay, remove the autoplay attribute completely.
+
+Correct:
+
+<video src="video.mp4"></video>
+
+Writing autoplay="false" does not disable autoplay because Boolean
+attributes are enabled simply by being present.
+
+Incorrect:
+
+<video src="video.mp4" autoplay="false"></video>
+
+
+8. LOOP ATTRIBUTE (3:28)
+
+The loop attribute makes the video start again automatically after
+it reaches the end.
+
+Example:
+
+<video src="video.mp4" controls loop></video>
+
+This is useful for short videos or background-style animations.
+
+
+9. MUTED ATTRIBUTE (3:42)
+
+The muted attribute makes the video start without sound.
+
+Example:
+
+<video src="video.mp4" muted></video>
+
+It is commonly used with autoplay because browsers often block
+videos that autoplay with sound.
+
+Example:
+
+<video src="video.mp4" autoplay muted loop></video>
+
+To enable sound again, remove the muted attribute.
+
+
+10. POSTER ATTRIBUTE (4:26)
+
+The poster attribute specifies an image displayed before the video
+starts playing.
+
+It works like a thumbnail or preview image.
+
+Example:
+
+<video src="video.mp4" poster="thumbnail.jpg" controls></video>
+
+The poster image is shown while the video has not started.
+If poster is not provided, the browser may show a blank area or
+the video's first frame.
+
+
+11. DIMENSIONS: WIDTH AND HEIGHT (4:41)
+
+The width attribute sets the video's display width.
+The height attribute sets the video's display height.
+
+Example:
+
+<video src="video.mp4" width="640" height="360"></video>
+
+Width and height help reserve space for the video and reduce layout
+shifting while the page loads.
+
+For responsive designs, CSS is usually better:
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+
+12. INTRODUCTION TO AUDIO (5:13)
+
+The <audio> tag is used to add sound or music to a webpage.
+
+Basic syntax:
+
+<audio src="song.mp3" controls></audio>
+
+The controls attribute displays controls such as:
+Play and pause
+Progress bar
+Volume control
+
+The <source> tag can also be used:
+
+<audio controls>
+  <source src="song.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+
+The type attribute tells the browser the format of the audio file.
+
+
+13. LOOPING AUDIO (6:20)
+
+The loop attribute makes the audio start again automatically after
+it finishes.
+
+Example:
+
+<audio src="song.mp3" controls loop></audio>
+
+The audio repeats continuously until the user pauses it.
+
+
+14. REPEAT FEATURE FOR MP3 (6:54)
+
+An MP3 file can be repeated by adding the loop attribute to the
+<audio> tag.
+
+Example:
+
+<audio controls loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+loop does not repeat only one part of the audio.
+It repeats the complete audio file from the beginning.
+
+The repeat feature works for audio formats supported by the browser.
+
+
+15. PRELOAD ATTRIBUTE (7:42)
+
+The preload attribute gives the browser a hint about how much media
+should be loaded before the user plays it.
+
+Common values:
+
+preload="none"
+Does not preload the audio or video.
+Useful when the user may not play the media.
+
+preload="metadata"
+Loads only basic information such as duration and dimensions.
+This is often a good balance between performance and usability.
+
+preload="auto"
+Tells the browser it may preload a large amount or the entire file.
+It can use more bandwidth.
+
+Example:
+
+<audio src="song.mp3" controls preload="metadata"></audio>
+
+Example with video:
+
+<video src="video.mp4" controls preload="none"></video>
+
+preload is only a hint.
+The browser may choose not to follow it.
+
+If autoplay is present, the browser generally needs to load enough
+of the media for playback, so autoplay takes priority over preload.
+
+
+COMPLETE EXAMPLE
+
+<video
+  width="640"
+  height="360"
+  controls
+  poster="thumbnail.jpg"
+  preload="metadata">
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
+<audio controls loop preload="metadata">
+  <source src="song.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+
+
+FINAL REVISION
+
+<video> adds video.
+<audio> adds sound or music.
+src specifies the media file.
+controls displays playback controls.
+autoplay starts media automatically.
+loop repeats media continuously.
+muted starts video without sound.
+poster displays a video thumbnail.
+width and height set dimensions.
+preload controls how much media is loaded in advance.
+CSS width: 100% and height: auto make video responsive.
+
+The attribute behavior and browser limitations were checked against
+HTML media element documentation. <citation src="1,2,4"></citation>
+-->
