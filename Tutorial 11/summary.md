@@ -1,0 +1,2 @@
+It was about semantic tags which is actually used in day-to-day programming and also helps boost SEO and ranks websites very well.
+Semantic tags help to define the architecture of website very clearly. 
