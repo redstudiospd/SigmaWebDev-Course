@@ -1,0 +1,5 @@
+The video introduces CSS, or **Cascading Style Sheets**, as the language used to style web pages. HTML provides a page’s structure, while CSS adds its visual design—such as colors and backgrounds. The instructor compares HTML to a car’s body or the human skeleton, CSS to its paint and appearance, and JavaScript to the engine or brain.
+
+The lesson demonstrates CSS using a `<style>` tag in an HTML file. A **selector** targets elements—for example, `div` selects every `<div>`—and **declarations** specify the styles to apply. Each declaration contains a property and a value, such as `color: red;` or `background: yellow;`. Multiple selectors, like `div, span`, can be grouped with a comma.
+
+The instructor previews future lessons on more selectors and CSS properties, and encourages students to practice, complete an earlier HTML exercise, explore the course materials, and try Replit if they don’t have a computer.
