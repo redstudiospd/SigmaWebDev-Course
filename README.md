@@ -142,7 +142,7 @@ Style directly in your markup with small utility classes instead of writing sepa
 - [x] Tutorial 24
 - [x] Tutorial 25
 - [x] Tutorial 26
-- [ ] Tutorial 27
+- [x] Tutorial 27
 - [ ] Tutorial 28
 - [ ] Tutorial 29
 - [ ] Tutorial 30
